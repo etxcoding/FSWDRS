@@ -32,7 +32,8 @@
                 
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <!-- <a data-toggle="modal" data-target="#loginModal"> -->
+                    <a id="button-login">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -170,7 +171,8 @@
                     <!-- <a href="#ReserveForm" class="btn btn-warning btn-block" 
                     data-toggle="tooltip" data-html="true" title="Or Call Us at <br><strong>+686 2418598</strong>" data-placement="bottom" >
                     Reserve Table</a> -->
-                    <a data-toggle="modal" data-target="#reserveModal" class="btn btn-warning btn-block" >
+                    <!-- <a data-toggle="modal" data-target="#reserveModal" class="btn btn-warning btn-block" > -->
+                    <a class="btn btn-warning btn-block" id="button-reserve" >
                         Reserve Table
                     </a>
                 </div>
@@ -346,6 +348,14 @@
                     $('#carouselButton').addClass('btn-danger')
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
+            });
+
+            // Modal functionality.
+            $('#button-login').click(function() {
+                $('#loginModal').modal('toggle');
+            });
+            $('#button-reserve').click(function() {
+                $('#reserveModal').modal('toggle')
             });
         });
     </script>
